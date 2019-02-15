@@ -8,10 +8,10 @@ import { ThemeInterface } from "./theme";
 const {
   default: styled,
   css,
-  injectGlobal,
+  // injectGlobal,
   keyframes,
-  ThemeProvider,
+  ThemeProvider
 } = styledComponents as ThemedStyledComponentsModule<ThemeInterface>;
 
-export { css, injectGlobal, keyframes, ThemeProvider };
+export { css, keyframes, ThemeProvider };
 export default styled;

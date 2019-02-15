@@ -1,4 +1,4 @@
-import React, { StatelessComponent } from "react";
+import React, { FC } from "react";
 import styled from "../../themed-components";
 
 export interface ButtonProps {
@@ -22,7 +22,7 @@ export interface ButtonProps {
 /**
  * This is a button
  */
-const BaseButton: StatelessComponent<ButtonProps> = ({
+const BaseButton: FC<ButtonProps> = ({
   onClick,
   icon,
   text,
@@ -40,7 +40,7 @@ const BaseButton: StatelessComponent<ButtonProps> = ({
   );
 };
 
-export const Button = styled<ButtonProps>(BaseButton)`
+export const Button = styled(BaseButton)`
   cursor: pointer;
   display: inline-block;
   height: ${props => props.theme.button.height}px;
@@ -73,7 +73,7 @@ export const Button = styled<ButtonProps>(BaseButton)`
   }
 `;
 
-export const PrimaryButton = styled<ButtonProps>(Button)`
+export const PrimaryButton = styled(Button)`
   background: ${props => props.theme.button.primary.background};
   color: ${props => props.theme.button.primary.color};
   &:hover {
